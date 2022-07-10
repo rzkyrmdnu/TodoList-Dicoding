@@ -78,14 +78,14 @@ function makeTodo(todoObject) {
     const undoButton = document.createElement('button');
     undoButton.classList.add('undo-button');
  
-    undoButton.addEventListener('click', function () {
+    undoButton.addEventListener('click', function (event) {
       undoTaskFromCompleted(todoObject.id);
     });
  
     const trashButton = document.createElement('button');
     trashButton.classList.add('trash-button');
  
-    trashButton.addEventListener('click', function () {
+    trashButton.addEventListener('click', function (event) {
       removeTaskFromCompleted(todoObject.id);
     });
  
@@ -94,7 +94,7 @@ function makeTodo(todoObject) {
     const checkButton = document.createElement('button');
     checkButton.classList.add('check-button');
     
-    checkButton.addEventListener('click', function () {
+    checkButton.addEventListener('click', function (event) {
       addTaskToCompleted(todoObject.id);
     });
     
